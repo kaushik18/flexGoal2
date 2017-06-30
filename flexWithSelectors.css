@@ -1,0 +1,71 @@
+body{
+  border-radius: 50px;
+}
+
+ div {
+   height: 100vh;
+   box-sizing: border-box;
+   display: flex;
+   flex-direction: column;
+   flex-wrap: wrap;
+   border: 1px solid;
+   border-color: black;
+   background-color: white;
+
+}
+
+div:nth-child(2)  {
+  height: 80vh;
+  display: flex;
+  flex-direction: row;
+  flex wrap: wrap;
+  flex: 1 1 auto;
+}
+
+div:first-child {
+  height: 20vh;
+  flex: 0 0 5em;
+  background: yellow;
+}
+
+
+div:last-child{
+  height: 2%;
+  flex: 0 0 5em;
+  background: yellow;
+}
+
+div:nth-child(2) > div{
+  height: inherit;
+  background: lightgreen;
+}
+
+div:nth-child(2) > div:first-child{
+  flex: 0 0 10em ;
+}
+div:nth-child(2) > div:nth-child(2){
+  flex: 1 1 30em;
+}
+div:nth-child(2) > div:last-child{
+  flex: 0 0 10em;
+}
+
+@media (max-width: 600px) {
+
+  div{
+    flex-wrap: nowrap;
+    overflow-y=auto;
+  }
+
+    div:nth-child(2){
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap-reverse;
+    background-color: lightblue;
+    flex: 1 1 auto;
+  }
+.div:nth-child(2)  { display: flex;  text-align:center; }
+div:nth-child(2) > div:nth-child(2)  { height: 30%; width: inherit; flex:1 1; order: 1; }
+div:nth-child(2) > div:first-child { height: 10%;  width: inherit; flex: 0 0 3em; order: 2; }
+div:nth-child(2) > div:last-child   { height: 10%; width: inherit; flex: 0 0 3em; order: 3; }
+}
